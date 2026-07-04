@@ -1,0 +1,7 @@
+# Private client data — never upload
+ΣΤΟΙΧΕΙΑ ΠΕΛΑΤΗ.txt
+# Backups
+*.bak-*
+assets/*.bak-*
+# Unused source card photo (2MB, not referenced by the site)
+LOGO - 1000003884.jpg
