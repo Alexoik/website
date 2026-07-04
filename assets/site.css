@@ -168,13 +168,14 @@
   .brand-txt span{font-size:8.5px;letter-spacing:.12em}
   .nav-side{margin-left:auto;min-width:30px;flex:none}
   .hero .shell{width:calc(100% - 40px);overflow:hidden}
-  .hero h1{font-size:clamp(27px,7.4vw,32px);line-height:1.24;max-width:100%}
+  /* Line 1: "Εξατομικευμένη"  ·  Line 2: "Ολιστική Ορθοπαιδική" (inline, together) */
+  .hero h1{font-size:clamp(23px,6.1vw,31px);line-height:1.16;max-width:100%}
   .hero h1 br{display:block}
-  .hero h1 .word{display:block;max-width:100%;overflow:visible}
-  .hero-copy{font-size:13px;max-width:282px;margin-left:auto;margin-right:auto}
+  .hero h1 .word{display:inline;max-width:100%;overflow:visible}
+  .hero-copy{font-size:13px;max-width:300px;margin:12px auto 18px}
   .hero-actions{display:grid;grid-template-columns:1fr;gap:9px;max-width:260px;margin-inline:auto}
   .hero-actions .btn{width:100%;min-width:0;padding:0 10px;font-size:12px;white-space:normal;text-align:center}
-  .hero-mobile-art{height:220px}
+  .hero-mobile-art{height:200px;margin-top:20px}
   .approach-card{min-height:auto}
   .map-panel{min-height:340px;padding:30px}
   .team-grid,.gallery-grid,.svc-cards{grid-template-columns:1fr}
