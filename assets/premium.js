@@ -196,19 +196,10 @@
     for(var i=0;i<slots.length;i++){ if(mins>=slots[i][0] && mins<slots[i][1]){ openNow=true; closesAt=slots[i][1]; break; } }
 
     var statusText, subText;
-    if(openNow){
-      statusText='Ανοιχτά τώρα';
-      subText='Κλείνει στις '+fmt(closesAt);
-    } else {
-      statusText='Κλειστά τώρα';
-      var nx=nextOpening(now, day, mins);
-      if(nx){
-        var when = nx.same ? 'σήμερα' : (nx.day===(day+1)%7 ? 'αύριο' : dayNamesGen[nx.day]);
-        subText='Ανοίγει '+when+' στις '+fmt(nx.start);
-      } else { subText='Επικοινωνήστε για ραντεβού'; }
-    }
+    statusText='Κατόπιν ραντεβού';
+    subText='Καλέστε το ιατρείο για διαθέσιμο ραντεβού';
 
-    var dotA=document.getElementById('dotAside'); if(dotA) dotA.classList.toggle('on', openNow);
+    var dotA=document.getElementById('dotAside'); if(dotA) dotA.classList.toggle('on', false);
     var lblA=document.getElementById('statusAside'); if(lblA) lblA.textContent = statusText;
     var sub=document.getElementById('subAside'); if(sub) sub.textContent=subText;
 
@@ -220,7 +211,7 @@
     // contact today line
     var ct=document.getElementById('contactToday'), ch=document.getElementById('contactHours');
     if(ct&&ch){
-      ct.textContent = (openNow?'Ανοιχτά σήμερα':'Σήμερα: '+dayNamesGen[day]);
+      ct.textContent = 'Ωράριο σήμερα';
       var todays=schedule[day];
       ch.textContent = todays.length ? todays.map(function(s){return fmt(s[0])+'–'+fmt(s[1]);}).join(' · ') : 'Κλειστά — δείτε ωράριο';
     }

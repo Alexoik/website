@@ -143,6 +143,22 @@
 .gallery-grid img{width:100%;height:270px;object-fit:cover;transition:transform .6s var(--ease)}
 .gallery-grid figure:hover img{transform:scale(1.06)}
 
+/* ---------- article listing / long-form articles ---------- */
+.article-index{background:var(--paper)}
+.article-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.article-card{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:30px 28px;box-shadow:var(--shadow-s);display:flex;flex-direction:column;gap:12px;transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .25s ease}
+.article-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-l);border-color:color-mix(in srgb,var(--accent) 30%,var(--line))}
+.article-card span{font-family:"Fraunces",serif;font-style:italic;color:var(--accent)}
+.article-card h3{font-size:22px;margin:0;color:var(--ink)}
+.article-card p{font-size:14.5px;line-height:1.65;color:var(--muted);margin:0}
+.article-section{background:var(--cream);border-top:1px solid var(--line)}
+.article-section + .article-section{background:var(--paper)}
+.article-wrap{display:grid;grid-template-columns:minmax(0,820px);justify-content:center}
+.article-body h2{font-family:"Fraunces",serif;font-size:clamp(30px,4.4vw,48px);font-weight:600;line-height:1.1;margin:0 0 24px;color:var(--ink)}
+.article-body p{font-size:17px;line-height:1.82;color:var(--ink-2);margin:0 0 18px}
+.article-signature{font-family:"Fraunces",serif;color:var(--ink);font-weight:600;margin-top:28px!important}
+
+
 /* ---------- responsive ---------- */
 @media (max-width:1000px){
   .nav-side .hamburger{display:flex}
@@ -178,7 +194,7 @@
   .hero-mobile-art{height:200px;margin-top:20px}
   .approach-card{min-height:auto}
   .map-panel{min-height:340px;padding:30px}
-  .team-grid,.gallery-grid,.svc-cards{grid-template-columns:1fr}
+  .team-grid,.gallery-grid,.svc-cards,.article-cards{grid-template-columns:1fr}
   .cta{padding:60px 0}
   .faq summary{font-size:17px}
 }
